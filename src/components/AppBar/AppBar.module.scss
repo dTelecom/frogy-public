@@ -1,0 +1,100 @@
+.appBar {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0 16px max(env(safe-area-inset-bottom), 16px);
+  z-index: 10;
+  box-sizing: border-box;
+
+  @supports (-webkit-touch-callout: none) {
+    padding: 0 16px 34px;
+  }
+
+  @media (min-width: 700px) {
+    height: 106px;
+  }
+
+  .appBarNav {
+    box-shadow: 0px 20px 20px 0px #000000CC;
+    height: 64px;
+    background: #19191E;
+    border-radius: 12px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+
+    @media (min-width: 700px) {
+      height: 72px;
+    }
+
+
+    .button {
+      font-size: 12px;
+      font-weight: 600;
+      font-family:  Inter, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
+      line-height: 12px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      color: #8A8A8E;
+      height: 64px;
+      position: relative;
+
+      @media (min-width: 393px) {
+        font-size: 14px;
+        line-height: 16px;
+      }
+
+      @media (min-width: 700px) {
+        height: 72px;
+      }
+
+      &[disabled] {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      &.buttonActive {
+        color: #fff;
+
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          margin: 0 auto;
+          height: 0;
+          width: 48px;
+          border: solid 0.5px #72E655;
+          left: 0;
+          right: 0;
+        }
+
+        span {
+          color: #FFFFFF;
+
+        }
+      }
+    }
+
+    .startStream {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #71E350 0%, #27A75A 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 0px 20px 0px #72E65580;
+    }
+  }
+}

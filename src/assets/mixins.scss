@@ -1,0 +1,15 @@
+@mixin containerWithBottomMenu {
+  padding-bottom: 98px;
+
+  @supports (-webkit-touch-callout: none) {
+    padding-bottom: 114px;
+  }
+
+  @media (min-width: 700px) {
+    padding-bottom: 106px;
+
+    @supports (-webkit-touch-callout: none) {
+      padding-bottom: 122px;
+    }
+  }
+}

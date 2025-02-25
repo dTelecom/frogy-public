@@ -1,0 +1,79 @@
+html {
+	height: 100vh;
+	overflow: clip;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	background: #000;
+	color: #fff;
+}
+
+#root {
+	height: 100%;
+}
+
+* {
+	font-family: Inter, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
+}
+
+button {
+	background: none;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+.react-modal-sheet-container {
+	background-color: transparent !important;
+}
+
+#appContainer {
+	display: flex;
+	align-items: stretch;
+	height: 100%;
+	overflow-y: auto;
+
+	& > main {
+		flex: 1 1 auto;
+		flex-direction: column;
+		justify-content: flex-start;
+		overflow-y: auto;
+	}
+}
+
+:global(.Toastify) {
+	position: fixed;
+	top: 16px;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	--toastify-toast-width: calc(100vw - 32px);
+	--toastify-toast-top: 16px;
+	--toastify-toast-left: 16px;
+	--toastify-toast-min-height: 0;
+}
+
+:global(.Toastify__toast), :global(.Toastify__toast-container), :global(.Toastify__toast-body) {
+	padding: 0 !important;
+}
+
+:global(.Toastify__close-button) {
+	display: none;
+}
+
+:global(.Toastify__toast) {
+	margin-bottom: 8px !important;
+}
+
+:global(.Toastify__toast-container) {
+	top: 16px !important;
+	left: 16px !important;
+}

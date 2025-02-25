@@ -1,0 +1,26 @@
+.container {
+  position: relative;
+  height: 200px;
+
+  video {
+  }
+}
+
+.mutedOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+
+  .mutedOverlayImage {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 20px;
+  }
+}

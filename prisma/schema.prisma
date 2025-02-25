@@ -1,0 +1,50 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["jsonProtocol"]
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+model User {
+  id              BigInt     @id
+  name            String?
+  premium         Boolean    @default(false)
+  language        String     @default("en")
+  starsTotal      Int        @default(0)
+  starsBalance    Int        @default(0)
+  gleamsTotal     Int        @default(0)
+  gleamsBalance   Int        @default(0)
+  wallet          String?
+  avatarUpdatedAt Int        @default(0)
+  tickets         Int        @default(0)
+  photo_url       String?
+  followers       Follower[] @relation("Followed")
+  following       Follower[] @relation("Following")
+}
+
+model Room {
+  id             BigInt  @id
+  title          String  @default("")
+  withHost       Boolean @default(false)
+  online         Int     @default(0)
+  coverUpdatedAt Int     @default(0)
+  url            String?
+  img            String?
+}
+
+model Follower {
+  followerId  BigInt
+  followingId BigInt
+
+  follower  User @relation("Following", fields: [followerId], references: [id])
+  following User @relation("Followed", fields: [followingId], references: [id])
+
+  @@id([followerId, followingId])
+}

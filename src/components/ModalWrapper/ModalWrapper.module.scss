@@ -1,0 +1,56 @@
+.wrapper {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 998;
+  padding: 16px;
+
+  .container {
+    padding: 24px;
+    border: 1px solid #383842;
+    border-radius: 20px;
+    background-color: #19191E;
+    //width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    &>h1 {
+      font-size: 24px;
+            font-weight: 600;
+      font-family: Unbounded, Inter, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
+      line-height: 24px;
+      letter-spacing: 0.3799999952316284px;
+      margin: 0;
+    }
+
+    &>p {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 16px;
+      text-align: left;
+      color: #8A8A8E;
+      margin: 0;
+
+      @media (min-width: 393px) {
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      @media (min-width: 700px) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+
+    .close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      z-index: 3;
+    }
+  }
+}

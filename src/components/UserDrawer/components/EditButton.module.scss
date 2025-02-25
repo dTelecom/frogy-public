@@ -1,0 +1,75 @@
+.editButton {
+  display: flex;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12.1px;
+  letter-spacing: -0.20000000298023224px;
+  color: #8A8A8E;
+  background: #272731;
+  border-radius: 12px;
+  padding: 4px 8px;
+}
+
+.modalWrapper {
+  @supports (-webkit-touch-callout: none) {
+    align-items: flex-start;
+  }
+}
+
+.modalContainer {
+  max-width: 295px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+  .title {
+    font-family: Unbounded, Inter, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.3799999952316284px;
+    text-align: center;
+  }
+
+  & > label {
+    margin-top: 24px;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 12.1px;
+    letter-spacing: -0.2px;
+    text-align: left;
+    color: #8A8A8E;
+
+    & > input {
+      margin-top: 8px;
+      padding: 12px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16px;
+      text-align: left;
+      border: 1px solid #383842;
+      background: transparent;
+      width: 100%;
+      outline: none;
+      color: #FFFFFF;
+      border-radius: 10px;
+      box-sizing: border-box;
+
+      &::placeholder {
+        color: #8A8A8E;
+      }
+    }
+  }
+
+  .buttonsContainer {
+    margin-top: 24px;
+    display: flex;
+    gap: 7px;
+
+    button {
+      width: 100%;
+    }
+  }
+}
+

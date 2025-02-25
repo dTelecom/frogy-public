@@ -1,0 +1,31 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  min-width: 247px;
+
+  & > p {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 19.36px;
+    text-align: center;
+    white-space: pre;
+  }
+
+  .buttons {
+    max-width: 177px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+
+    button {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px;
+      text-align: center;
+    }
+  }
+}

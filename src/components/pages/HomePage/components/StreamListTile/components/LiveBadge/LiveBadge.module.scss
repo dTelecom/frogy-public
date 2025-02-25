@@ -1,0 +1,28 @@
+.liveBadge, .offlineBadge {
+  border-radius: 4px;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  justify-content: center;
+}
+
+.liveBadge {
+  padding-right: 6px;
+  background: #E62E22;
+  text-transform: uppercase;
+  height: 21px;
+
+  .liveBadgeIcon {
+    border-radius: 4px;
+    height: 21px;
+  }
+}
+
+.offlineBadge {
+  height: 18px;
+  padding: 0 6px;
+  background-color: rgba(0, 0, 0, 0.5);
+}

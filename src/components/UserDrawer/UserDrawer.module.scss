@@ -1,0 +1,196 @@
+.wrapper {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  height: 100vh;
+}
+
+.container {
+  padding: 24px;
+  width: 100%;
+  background: #19191E;
+  border-radius: 20px 20px 0 0;
+  border-color: #383842;
+  border-style: solid;
+  border-width: 1px 1px 0 1px;
+  position: relative;
+  min-height: 308px;
+  box-sizing: border-box;
+
+  .close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+
+  .titleContainer {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 24px;
+
+    .title {
+      font-size: 24px;
+      font-weight: 600;
+      font-family: Unbounded, Inter, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
+      line-height: 100%;
+      letter-spacing: 0.3799999952316284px;
+      text-align: left;
+
+      @media (min-width: 700px) {
+        font-size: 28px;
+      }
+    }
+  }
+
+
+  .profileContent {
+    display: flex;
+    gap: 16px;
+
+    .avatarPlaceholder {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #272731;
+      border-radius: 50%;
+      height: 72px;
+      width: 72px;
+
+      .avatar {
+        height: 72px;
+        width: 72px;
+        border-radius: 50%;
+      }
+    }
+
+    .profileInfo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 72px;
+      width: 100%;
+      min-width: 1px;
+
+      .pageInfoButtonsContainer {
+        display: flex;
+        gap: 4px;
+        flex-wrap: wrap;
+      }
+
+      .pageInfoNameContainer {
+        display: flex;
+        height: 24px;
+        gap: 8px;
+        align-items: center;
+        margin-bottom: 4px;
+
+        h3 {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          font-size: 20px;
+          font-weight: 800;
+          line-height: 100%;
+          max-width: 160px;
+
+          @media (min-width: 700px) {
+            font-size: 24px;
+          }
+        }
+      }
+
+      .infoBadges {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+    }
+  }
+
+  .userStats {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .statGrid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      & > div {
+        display: flex;
+        gap: 8px;
+        background: #272731;
+        border-radius: 12px;
+        padding: 12px;
+        width: calc(50% - 4px);
+        box-sizing: border-box;
+
+        & > svg {
+          flex-shrink: 0;
+          width: 32px;
+          height: 32px;
+
+          @media (min-width: 700px) {
+            width: 40px;
+            height: 40px;
+          }
+        }
+
+        & > div {
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          width: calc(100% - 64px);
+
+          h3 {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-size: 16px;
+            font-weight: 800;
+            line-height: 19.36px;
+            text-align: left;
+
+            @media (min-width: 700px) {
+              font-size: 20px;
+              line-height: 24.2px;
+            }
+          }
+
+          p {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 16px;
+            color: #8A8A8E;
+            text-align: left;
+
+            @media (min-width: 393px) {
+              font-size: 14px;
+              line-height: 19.36px;
+            }
+
+            @media (min-width: 700px) {
+              font-size: 16px;
+              line-height: 19.36px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .buttonsContainer {
+    display: flex;
+    gap: 7px;
+    margin-top: 24px;
+
+    & > button {
+      padding: 11px 2px;
+      max-width: calc(50% - 4px);
+    }
+  }
+}

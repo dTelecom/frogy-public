@@ -1,0 +1,87 @@
+.wrapper {
+	position: absolute;
+	left: 16px;
+	top: 16px;
+	display: flex;
+	gap: 8px;
+	max-width: calc(100vw - 214px);
+}
+
+.badge {
+	width: 100%;
+	display: flex;
+	z-index: 12;
+	background: #00000080;
+	border-radius: 15px;
+	padding: 4px;
+	gap: 8px;
+
+	button {
+		width: 32px;
+		height: 32px;
+
+		@media (min-width: 700px) {
+			height: 40px;
+			width: 40px;
+		}
+	}
+
+	.badgeImage {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+
+		.image {
+			border-radius: 10px;
+			height: 32px;
+			width: 32px;
+
+			@media (min-width: 700px) {
+				height: 40px;
+				width: 40px;
+			}
+		}
+
+		.microphoneDisabledIcon {
+			border-radius: 10px;
+			background: #00000080;
+			position: absolute;
+			inset: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	.badgeInfo {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+		padding-right: 4px;
+		max-width: 200px;
+		min-width: 0;
+		width: 100%;
+		justify-content: center;
+
+		.badgeName {
+			font-size: 12px;
+			font-weight: 700;
+			line-height: 14.52px;
+			text-align: left;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+
+			@media (min-width: 393px) {
+				font-size: 14px;
+				line-height: 16px;
+			}
+
+			@media (min-width: 700px) {
+				font-size: 16px;
+				line-height: 19.36px;
+			}
+		}
+	}
+}

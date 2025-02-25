@@ -1,0 +1,249 @@
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+
+  .close {
+    position: absolute;
+    top: 24px;
+    right: 16px;
+    z-index: 2;
+    height: 24px;
+    background: #00000080;
+    border-radius: 4px;
+    padding: 2px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .viewerCountWrapper {
+    position: absolute;
+    z-index: 2;
+    top: 24px;
+    right: 48px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    gap: 9px;
+
+    .viewerCount {
+      height: 24px;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 14.52px;
+      padding: 0 8px;
+      border-radius: 4px;
+      background: #00000080;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media (min-width: 393px) {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
+
+  .buttonsContainer {
+    position: absolute;
+    bottom: 50px;
+    left: 16px;
+    right: 16px;
+    display: flex;
+    gap: 8px;
+    z-index: 2;
+
+    .camSwitchIcon {
+      border-radius: 10px;
+      background: #00000080;
+      z-index: 2;
+      height: 40px;
+      width: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      & > svg {
+        position: absolute;
+        left: 5px;
+        top: 5px;
+      }
+
+      :global(.lk-button-menu:after) {
+        content: none ;
+      }
+
+      :global(.lk-device-menu) {
+        color: #FFFFFF;
+        padding: 0;
+
+        ul {
+          border-radius: 15px;
+          background: rgba(0, 0, 0, 0.8);
+          list-style-type: none;
+          margin-bottom: 10px;
+          padding: 10px;
+
+          li {
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #FFFFFF;
+
+            &[data-lk-active="true"] {
+              background-color: #72E65580;
+            }
+          }
+        }
+      }
+    }
+
+    .chatButton {
+      border-radius: 10px;
+      background: #00000080;
+      height: 40px;
+      width: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        height: 32px;
+        width: 32px;
+      }
+    }
+  }
+
+  :global(.lk-room-container) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+
+    :global(.lk-participant-tile) {
+      width: 100%;
+      height: 100%;
+
+      &[data-lk-local-participant='true'] {
+        &[data-lk-facing-mode='user'] {
+          video {
+            transform: rotateY(180deg);
+          }
+        }
+      }
+
+      video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .clickerContainer {
+    display: flex;
+    margin-left: auto;
+    gap: 8px;
+
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    touch-action: none;
+
+    .clickerButton {
+      position: relative;
+      font-size: 24px;
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      background: #00000080;
+      border-radius: 10px;
+
+      @media (min-width: 393px) {
+        width: 44px;
+        height: 44px;
+      }
+
+      @media (min-width: 700px) {
+        font-size: 29px;
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+}
+
+.emojiContainer {
+  position: fixed;
+  bottom: 161px;
+  right: 16px;
+  width: 42px;
+  height: 250px;
+
+  :global(.emoji) {
+    position: absolute;
+    font-size: 24px; /* Adjust emoji size */
+    animation: floatUpAndFade 4s linear forwards; /* Adjust animation duration */
+    opacity: 0; /* Start emojis hidden */
+  }
+
+  @keyframes floatUpAndFade {
+    0% {
+      bottom: 0;
+      opacity: 1;
+    }
+    100% {
+      bottom: 150%; /* Adjust distance traveled */
+      opacity: 0;
+    }
+  }
+
+}
+
+.startAudioContainer {
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 1s 1s forwards;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  button {
+    background: linear-gradient(180deg, #71E350 0%, #27A75A 100%);
+    border-radius: 10px;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    padding: 11px 27.5px;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,27 @@
+.toast {
+  display: flex;
+  background-color: #19191E;
+  border-radius: 12px;
+  padding: 8px;
+  width: calc(100vw - 32px);
+  gap: 8px;
+  box-sizing: border-box;
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .message {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: left;
+    padding-top: 4px;
+  }
+
+  .closeButton {
+    margin-left: auto;
+  }
+}

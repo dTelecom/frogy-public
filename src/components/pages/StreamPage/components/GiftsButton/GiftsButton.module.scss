@@ -1,0 +1,384 @@
+.giftsButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 2;
+  right: 16px;
+  bottom: 122px;
+
+  @media (min-width: 393px) {
+    bottom: 126px;
+  }
+
+  @media (min-width: 700px) {
+    bottom: 138px;
+  }
+
+
+  img {
+    width: 44px;
+
+  }
+}
+
+
+.wrapper {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  height: 100vh;
+  width: 100vw;
+
+}
+
+.container {
+  padding: 24px;
+  width: 100%;
+  background: #19191E;
+  border-radius: 20px 20px 0 0;
+  border-color: #383842;
+  border-style: solid;
+  border-width: 1px 1px 0 1px;
+  position: relative;
+  min-height: 308px;
+  box-sizing: border-box;
+
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 10px;
+  letter-spacing: -0.20000000298023224px;
+
+  .close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+
+  .title {
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Unbounded, Inter, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
+    line-height: 100%;
+    letter-spacing: 0.3799999952316284px;
+    text-align: left;
+  }
+
+  .toggle {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    border-radius: 15px;
+    background: #272731;
+    cursor: pointer;
+    width: fit-content;
+
+    .toggleButton {
+      color: #FFFFFF;
+      font-size: 10px;
+      font-weight: 700;
+      line-height: 12.1px;
+      text-align: center;
+      padding: 4px 6px;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    .selectedToggle {
+      background: #FFFFFF;
+      color: #19191E;
+    }
+  }
+
+  .balances {
+    display: flex;
+    margin-top: 16px;
+    justify-content: space-between;
+
+    .balance {
+      display: flex;
+      flex-direction: column;
+
+      & > span {
+        margin-bottom: 2px;
+        display: block;
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 12.1px;
+        text-align: left;
+        color: #8A8A8E;
+      }
+
+      & > div {
+        display: flex;
+        align-items: center;
+        height: 16px;
+        color: #FFFFFF;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 16px;
+        text-align: right;
+        gap:4px;
+
+        svg, img {
+          height: 16px;
+        }
+      }
+    }
+  }
+
+  .giftsContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-top: 16px;
+
+    .giftWrapper {
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .selectedRechargeIcon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-top-right-radius: 10px;
+    }
+
+    .gift {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 4px;
+      border: 1px solid #383842;
+      border-radius: 10px;
+
+      &.selectedGift {
+        box-shadow: 0px 0px 12px 0px #46DE2080 inset,0px -10px 40px -10px #46DE2080 inset;
+
+        border: 1px solid #46DE2080;
+        border-image-source: linear-gradient(137.12deg, rgba(255, 255, 255, 0.1) -0.08%, #70E251 98.5%);
+
+        .giftInfo {
+          .giftPrice {
+            color: #FFFFFF;
+          }
+        }
+      }
+
+      .rechargeStar {
+        margin-top: 4px;
+
+        svg {
+          height: 20px;
+        }
+
+        margin-bottom: 8px;
+      }
+
+      .rechargeInfo {
+        margin-bottom: 4px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 4px;
+        width: 100%;
+        text-align: center;
+
+        .giftName {
+          color: #FFFFFF;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 16px;
+          text-align: center;
+        }
+
+        .giftPrice {
+          color: #8A8A8E;
+          font-size: 10px;
+          font-weight: 500;
+          line-height: 12.1px;
+          letter-spacing: -0.20000000298023224px;
+          text-align: center;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 100%;
+        }
+      }
+
+      .giftImg {
+        width: 40px;
+        height: 40px;
+      }
+
+      .giftInfo {
+        margin-top: 4px;
+        width: 100%;
+        text-align: center;
+
+        .giftName {
+          margin-bottom: 4px;
+          font-size: 10px;
+          font-weight: 500;
+          line-height: 12.1px;
+          letter-spacing: -0.20000000298023224px;
+          text-align: center;
+          color: #FFFFFF;
+          display: block;
+        }
+
+        .giftPrice {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 4px;
+          color: #8A8A8E;
+          font-size: 10px;
+          font-weight: 500;
+          line-height: 10px;
+          letter-spacing: -0.20000000298023224px;
+
+          svg {
+            max-height: 10px;
+            max-width: 11px;
+          }
+        }
+      }
+    }
+  }
+
+  .divider {
+    border: 1px dashed #383842;
+    margin: 16px 0;
+    width: 100%;
+  }
+
+  .controlsContainer {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+
+
+    .amountContainer {
+      border-radius: 12px;
+      background: #272731;
+      padding: 4px;
+      display: flex;
+
+      .amountButton {
+        min-width: 24px;
+        padding: 6px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        color: #FFFFFF;
+
+        &.selectedAmount {
+          background: #FFFFFF;
+          color: #19191E;
+        }
+      }
+
+      .sendButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 6px 8px;
+        border-radius: 10px;
+        background: linear-gradient(180deg, #71E350 0%, #27A75A 100%);
+        gap: 4px;
+        color: #FFFFFF;
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 12.1px;
+        text-align: center;
+        margin-left: 8px;
+
+        svg {
+          height: 12px;
+        }
+      }
+    }
+
+    .rechargeTotal {
+      display: flex;
+      gap: 4px;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px;
+      align-items: flex-start;
+      flex-direction: column;
+
+      svg {
+        height: 16px;
+      }
+
+      .rechargeTotalFirst {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .subtext {
+
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 12.1px;
+        text-align: left;
+
+      }
+    }
+
+    .rechargeConfirmButton {
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 16px;
+      letter-spacing: 0.5px;
+      text-align: center;
+      color: #FFFFFF;
+      background: linear-gradient(180deg, #71E350 0%, #27A75A 100%);
+      border: 1px solid #72E655;
+      border-radius: 10px;
+    }
+  }
+}
+
+.rechargeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 8px;
+  border-radius: 10px;
+  background: #272731;
+  gap: 4px;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 12px;
+
+  span {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 12.1px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: center;
+    color: #8A8A8E;
+  }
+
+  & > svg, & > img {
+    height: 12px;
+  }
+}
+
+.greenText {
+  color: #72E655;
+}
