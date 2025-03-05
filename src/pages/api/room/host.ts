@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 
 import prisma from "@/lib/prisma";
 import { validateUser } from "@/pages/api/auth";
-import { AccessToken } from "@dtelecom/server-sdk-js";
+const { AccessToken } = require("@dtelecom/server-sdk-js");
 
 import requestIp from "request-ip";
 
